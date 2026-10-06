@@ -45,12 +45,36 @@ import java.util.*;
 //}
 
 
-//the above is the O(N^2) approch which doesn't get accepted
+//the above is the O(N^2) approach which doesn't get accepted
 
-//below approch will be accepted because its time complexity is
+//below approach will be accepted because its time complexity is O(S+1001+R)
 
 public class Q3Solution{
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws Exception {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        String[] input = bf.readLine().split(" ");
+        int S = Integer.parseInt(input[0]);
+        int R = Integer.parseInt(input[1]);
+        int[] freq = new int[1001];
+        String[] samples = bf.readLine().split(" ");
+        for(int i=0;i<S;i++){
+            int sample = Integer.parseInt(samples[i]);
+            freq[sample]++;
+        }
+        int[] prefix = new int[1001];
+        prefix[0] = freq[0];
+        for(int i=1;i<1001;i++){
+            prefix[i] = prefix[i-1]+freq[i];
+        }
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;i<R;i++){
+            String[] ranges = bf.readLine().split(" ");
+            int min = Integer.parseInt(ranges[0]);
+            int max = Integer.parseInt(ranges[1]);
+            int count = prefix[max]-prefix[min-1];
+            sb.append(count);
+            sb.append(" ");
+        }
+        System.out.println(sb.toString().trim());
     }
 }
