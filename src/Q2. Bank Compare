@@ -1,0 +1,22 @@
+Problem 20: Bank Compare
+There are two banks – Bank A and Bank B. Their interest rates vary over the loan tenure. You have received offers from both banks specifying the annual rate of interest, tenure, and variations of the interest rate over the entire tenure. Your task is to choose the offer that results in the least total interest paid and reject the other.
+
+Loan repayment occurs monthly, and the Equated Monthly Installment (EMI) is calculated using the formula:
+
+EMI = loanAmount monthlyInterestRate / (1 – 1 / (1 + monthlyInterestRate)^(numberOfYears 12))
+
+Constraints
+1 <= P <= 1,000,000 (Principal/Loan Amount)
+1 <= T <= 50 (Tenure in years)
+1 <= N1 <= 30 (Number of interest rate slabs for Bank A)
+1 <= N2 <= 30 (Number of interest rate slabs for Bank B)
+Learn Math
+Input Format
+First line: P (Principal, Loan Amount)
+Second line: T (Total Tenure in years)
+Third line: N1 (Number of slabs of interest rates for Bank A)
+Next N1 lines: Interest rate and period for Bank A (delimited by a single space). The first slab starts from the first year, and subsequent slabs start from the end of the previous slab.
+After N1 lines: N2 (Number of slabs of interest rates for Bank B)
+Next N2 lines: Interest rate and period for Bank B (delimited by a single space). The first slab starts from the first year, and subsequent slabs start from the end of the previous slab.
+Output Format
+Your decision: either Bank A or Bank B (based on which results in the least total interest paid).
