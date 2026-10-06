@@ -1,0 +1,16 @@
+Problem :18 Count Pairs
+Given an array of integers A, and an integer K find a number of happy elements. Element X is happy if there exists at least 1 element whose difference is less than K i.e. an element X is happy if there is another element in the range [X-K, X+K] other than X itself.Dynamic programming course
+
+Constraints 1 <= N <= 10^5 0 <= K <= 10^5 0 <= A[i] <= 10^9
+
+Input The first line contains two integers N and K where N is the size of the array and K is a number as described above. The second line contains N integers separated by space.
+
+Output Print a single integer denoting the total number of happy elements.
+
+Example 1
+
+Input
+6 3
+5 5 7 9 15 2
+Output
+5
