@@ -1,0 +1,63 @@
+Here is the problem extracted from the video tutorial in the requested format:
+
+---
+
+### Problem Description
+
+You are given an $M \times N$ grid (matrix) representing a box that contains several stones, where empty spaces are represented by dots (`.`) and stones are represented by stars (`*`).
+
+The simulation involves the following sequence of operations:
+
+1. **Initial Gravity:** Apply gravity so that all stones fall down to the bottom of their respective columns (filling empty spaces from the bottom up).
+2. **Rotation:** Rotate the entire grid by $90^\circ$ either **left** (anticlockwise) or **right** (clockwise) based on a given direction command.
+3. **Final Gravity:** Apply gravity again to the rotated grid so that all stones settle down to the bottom of their new columns.
+
+The objective is to output the final state of the grid after completing all these steps.
+
+---
+
+### Constraints
+
+* Number of rows ($M$) $\ge 3$ [[09:36](https://www.youtube.com/watch?v=tEzttXAYpoM&t=576)]
+* Number of columns ($N$) $\le 200$ [[09:36](https://www.youtube.com/watch?v=tEzttXAYpoM&t=576)]
+* Grid characters: `.` represents empty spaces, and `*` represents stones [[09:49](https://www.youtube.com/watch?v=tEzttXAYpoM&t=589)].
+* Direction input string: `"left"` or `"right"` [[20:31](https://www.youtube.com/watch?v=tEzttXAYpoM&t=1231)].
+
+---
+
+### Input
+
+* The first line contains two space-separated integers, $M$ and $N$, representing the number of rows and columns [[17:40](https://www.youtube.com/watch?v=tEzttXAYpoM&t=1060)].
+* The next $M$ lines each contain a string or character sequence of length $N$ representing the initial state of the grid rows [[18:19](https://www.youtube.com/watch?v=tEzttXAYpoM&t=1099)].
+* The final line contains a string indicating the rotation direction (`left` or `right`) [[20:31](https://www.youtube.com/watch?v=tEzttXAYpoM&t=1231)].
+
+---
+
+### Output
+
+* The resulting $M \times N$ grid (matrix) printed row by row after applying the initial gravity, rotation, and final gravity steps [[24:03](https://www.youtube.com/watch?v=tEzttXAYpoM&t=1443)].
+
+---
+
+### Example
+
+#### Sample Input
+
+```text
+4 4
+..**
+.*.*
+***.
+.*..
+right
+
+```
+
+#### Explanation / Steps
+
+1. **Initial Grid Setup:** A $4 \times 4$ matrix with stones (`*`) placed at specified coordinates.
+2. **Apply Initial Gravity:** Stones fall down to the lowest available rows in each column.
+3. **Rotation:** Rotate the grid $90^\circ$ clockwise (`right`) [[12:59](https://www.youtube.com/watch?v=tEzttXAYpoM&t=779)].
+4. **Apply Final Gravity:** Stones settle down again to the bottom of the columns in the newly rotated grid [[14:13](https://www.youtube.com/watch?v=tEzttXAYpoM&t=853)].
+
+[TCS CodeVita season 14 Mock 1 (RasikhBox)](http://www.youtube.com/watch?v=tEzttXAYpoM)
